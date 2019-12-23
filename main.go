@@ -389,21 +389,21 @@ import "fmt"
 
 // }
 
-func main() {
-	// a := 1
-	// s := &a
-	// test(s)
-	// fmt.Println(a, *s)
-	// fmt.Println(test(1, 2, 3, 3, 4))
-	// arr := []int{2, 3, 3}
-	// fmt.Println(test(9, 9, arr...))
+// func main() {
+// 	// a := 1
+// 	// s := &a
+// 	// test(s)
+// 	// fmt.Println(a, *s)
+// 	// fmt.Println(test(1, 2, 3, 3, 4))
+// 	// arr := []int{2, 3, 3}
+// 	// fmt.Println(test(9, 9, arr...))
 
-	arr := []int{1, 2, 4}
-	printSlice(arr...)
-	// test(1, 2)
+// 	arr := []int{1, 2, 4}
+// 	printSlice(arr...)
+// 	// test(1, 2)
 
-	// arr2 := {a: 1}
-}
+// 	// arr2 := {a: 1}
+// }
 
 // func test(reply *int) {
 // 	*reply = 2
@@ -419,11 +419,11 @@ func main() {
 // 	return a + b + sum
 // }
 
-func printSlice(args ...int) {
-	for _, v := range args {
-		fmt.Println(v)
-	}
-}
+// func printSlice(args ...int) {
+// 	for _, v := range args {
+// 		fmt.Println(v)
+// 	}
+// }
 
 // type Options struct {
 // 	c int
@@ -436,8 +436,46 @@ func printSlice(args ...int) {
 // 	}
 // }
 
-func test2(values ...interface{}) {
-	for _, value := range values {
-		fmt.Println(value)
+// func test2(values ...interface{}) {
+// 	for _, value := range values {
+// 		fmt.Println(value)
+// 	}
+// }
+
+// 递归函数
+
+// func main() {
+// 	for i := -5; i < 10; i++ {
+// 		r, index := fibonacci(i)
+// 		fmt.Println(r, index)
+// 	}
+// 	printInt(10)
+// }
+
+// func fibonacci(i int) (int, int) {
+// 	if i <= 1 {
+// 		return 1, i
+// 	}
+// 	f, _ := fibonacci(i - 1)
+// 	l, _ := fibonacci(i - 2)
+// 	return f + l, i
+// }
+
+// func printInt(i int) {
+// 	fmt.Println(i)
+// 	if i > 1 {
+// 		printInt(i - 1)
+// 	}
+// }
+
+func main() {
+	fmt.Println(jc(2))
+}
+
+func jc(n int) int {
+	if n == 0 {
+		return 1
 	}
+
+	return n * jc(n-1)
 }
