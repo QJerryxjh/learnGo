@@ -230,7 +230,46 @@ import "fmt"
 // 	return ret
 // }
 
+// func main() {
+// arr := [5]int{1: 2, 2: 2}
+// fmt.Println(arr)
+
+// 	arr := [3][2]int{
+// 		[2]int{1, 2},
+// 		[2]int{2, 3},
+// 		[2]int{3, 4},
+// 	}
+// 	fmt.Println(arr)
+// }
+
+// func main() {
+// 	a := 2
+// 	switch a {
+// 	case 1:
+// 		fmt.Println("1")
+// 	case 2:
+// 		fmt.Println("2")
+// 		fallthrough
+// 	case 3:
+// 		fmt.Println("3")
+// 	default:
+// 		fmt.Println("default")
+// 	}
+// }
+
 func main() {
-	arr := [5]int{1: 2, 2: 2}
-	fmt.Println(arr)
+	arr := [5]int{1, 2, 3, 4, 5}
+	// sli1 := arr[:3]
+	// copy(sli1, sli2)
+	// fmt.Println(sli1, sli2)
+	// sli2 := append(sli1[1:], 333, 444, 55, 66)
+	// fmt.Println(sli1, sli2, arr)
+	// sli2[0] = 111
+	// fmt.Println(sli1, sli2, arr)
+
+	sliceTo := arr[:3]
+	sliceFrom := []int{33, 44}
+	l := copy(sliceTo, sliceFrom)
+	fmt.Println(sliceTo, arr, l)
+
 }
