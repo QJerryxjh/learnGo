@@ -258,7 +258,7 @@ import "fmt"
 // }
 
 func main() {
-	arr := [5]int{1, 2, 3, 4, 5}
+	// arr := [5]int{1, 2, 3, 4, 5}
 	// sli1 := arr[:3]
 	// copy(sli1, sli2)
 	// fmt.Println(sli1, sli2)
@@ -267,9 +267,28 @@ func main() {
 	// sli2[0] = 111
 	// fmt.Println(sli1, sli2, arr)
 
-	sliceTo := arr[:3]
-	sliceFrom := []int{33, 44}
-	l := copy(sliceTo, sliceFrom)
-	fmt.Println(sliceTo, arr, l)
+	// sliceTo := arr[:3]
+	// sliceFrom := []int{33, 44}
+	// l := copy(sliceTo, sliceFrom)
+	// fmt.Println(sliceTo, arr, l)
+	// var sli []int
+	// fmt.Println(sli)
+	// fmt.Println(sli == nil)
+	// sli2 := []int{}
+	// fmt.Println(sli2)
+	// fmt.Println(sli2 == nil)
 
+	// // sli3 := make([]int, 0, 10)
+	// // fmt.Println(sli3)
+	// // fmt.Println(sli3 == nil)
+
+	// sli3 := []int{1, 2, 3, 4, 5}
+	// sli4 := sli3[3:]
+	// copy(sli4, sli3[4:])
+	// fmt.Println(sli4)
+	// fmt.Println(sli3)
+
+	i := 0
+
+	fmt.Println(bool(1))
 }
