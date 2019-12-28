@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func main() {
 // 	var id [5]int
 
@@ -288,7 +286,4 @@ func main() {
 	// fmt.Println(sli4)
 	// fmt.Println(sli3)
 
-	i := 0
-
-	fmt.Println(bool(1))
 }

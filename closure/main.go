@@ -29,17 +29,31 @@ import "fmt"
 // 	fmt.Println(f())
 // }
 
+// func main() {
+// 	retFn := Add2()
+// 	fmt.Println(retFn(3))
+// 	fmt.Println(retFn(3))
+// 	fmt.Println(retFn(3))
+// }
+
+// func Add2() func(c int) int {
+// 	o := 0
+// 	return func(b int) int {
+// 		o++
+// 		return b + o
+// 	}
+// }
+
 func main() {
-	retFn := Add2()
-	fmt.Println(retFn(3))
-	fmt.Println(retFn(3))
-	fmt.Println(retFn(3))
+	re := test()
+	fmt.Println(re(2))
+	fmt.Println(re(2))
 }
 
-func Add2() func(c int) int {
-	o := 0
-	return func(b int) int {
-		o++
-		return b + o
+func test() func(y int) int {
+	x := 0
+	return func(y int) int {
+		x++
+		return x + y
 	}
 }
