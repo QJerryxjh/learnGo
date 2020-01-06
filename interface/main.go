@@ -1,7 +1,10 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+
+	"../test"
 )
 
 // import "fmt"
@@ -239,27 +242,35 @@ import (
 // 	fmt.Println(vec.at(2))
 // }
 
-type Node struct {
-	left  *Node
-	data  interface{}
-	right *Node
-}
+// type Node struct {
+// 	left  *Node
+// 	data  interface{}
+// 	right *Node
+// }
 
-func newNode(left *Node, data interface{}, right *Node) *Node {
-	return &Node{left, data, right}
-}
+// func newNode(left *Node, data interface{}, right *Node) *Node {
+// 	return &Node{left, data, right}
+// }
 
-func (n *Node) setData(data interface{}) {
-	n.data = data
-}
+// func (n *Node) setData(data interface{}) {
+// 	n.data = data
+// }
+
+// func main() {
+// 	n1 := newNode(nil, "n1", nil)
+// 	n1.setData("new n1")
+// 	fmt.Println(n1)
+// 	n2 := newNode(nil, "n2", nil)
+// 	n2.setData("new n2")
+// 	fmt.Println(n2)
+// 	n1.left = n2
+// 	fmt.Println(n1)
+// }
 
 func main() {
-	n1 := newNode(nil, "n1", nil)
-	n1.setData("new n1")
-	fmt.Println(n1)
-	n2 := newNode(nil, "n2", nil)
-	n2.setData("new n2")
-	fmt.Println(n2)
-	n1.left = n2
-	fmt.Println(n1)
+	a := 1
+	b := 2
+	c := test.Add(a, b)
+	fmt.Println(c)
+	fmt.Printf("%T", errors.New("ssss"))
 }
